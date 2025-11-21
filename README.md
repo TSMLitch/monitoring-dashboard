@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Building Monitoring Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            background: #e0e0e0;
+            padding: 10px;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .menu button {
+            padding: 12px 18px;
+            border: none;
+            background: #003366;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            opacity: 0.85;
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>Building Monitoring & Reporting Dashboard</header>
+
+<div class="menu">
+    <button onclick="showSection('maintenance')">Maintenance</button>
+    <button onclick="showSection('security')">Security</button>
+    <button onclick="showSection('safety')">Safety Marshal</button>
+    <button onclick="showSection('housekeeping')">Housekeeping</button>
+    <button onclick="showSection('parking')">Parking Attendant</button>
+</div>
+
+<!-- Maintenance -->
+<div id="maintenance" class="content-section">
+    <h2>Maintenance Team Reporting</h2>
+    <iframe src="PASTE_MAINTENANCE_FORM_EMBED_LINK_HERE"></iframe>
+</div>
+
+<!-- Security -->
+<div id="security" class="content-section">
+    <h2>Security Team Reporting</h2>
+    <iframe src="PASTE_SECURITY_FORM_EMBED_LINK_HERE"></iframe>
+</div>
+
+<!-- Safety Marshal -->
+<div id="safety" class="content-section">
+    <h2>Safety Marshal Reporting</h2>
+    <iframe src="PASTE_SAFETY_FORM_EMBED_LINK_HERE"></iframe>
+</div>
+
+<!-- Housekeeping -->
+<div id="housekeeping" class="content-section">
+    <h2>Housekeeping Team Reporting</h2>
+    <iframe src="PASTE_HOUSEKEEPING_FORM_EMBED_LINK_HERE"></iframe>
+</div>
+
+<!-- Parking -->
+<div id="parking" class="content-section">
+    <h2>Parking Attendant Reporting</h2>
+    <iframe src="PASTE_PARKING_FORM_EMBED_LINK_HERE"></iframe>
+</div>
+
+<script>
+function showSection(id) {
+    var sections = document.getElementsByClassName("content-section");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
